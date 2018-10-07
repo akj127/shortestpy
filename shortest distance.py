@@ -1,6 +1,6 @@
 	
 #akhil jarodia 2017130 B1
-def dijkstra(Graph,source):
+def dijkstra(Graph,source):   #function for dijkstra
 	
 	dist=[]
 	prev=[]
@@ -40,7 +40,7 @@ def dijkstra(Graph,source):
         	
 
 
-def bfs(Graph,source):
+def bfs(Graph,source):	#function for bfs
 	a=[]
 	a.append(source)
 	b=[]
