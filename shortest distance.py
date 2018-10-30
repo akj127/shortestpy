@@ -40,34 +40,22 @@ def dijkstra(Graph,source):
         	
 
 
-def bfs(Graph,source):
-	a=[]
-	a.append(source)
-	b=[]
-	dist=[]
-	b.append(source)
-	from math import inf
-	for i in range(len(Graph[1])):
-		dist.append(inf)
-		
-	dist[source]=0
-	while len(a)>0:
-		
-		u=a[0]
-		a.remove(a[0])
-		for i in Graph[0][u]:
-			if i not in b:
-				a.append(i)
-				b.append(i)
-				dist[i]=dist[u]+Graph[1][u][Graph[0][u].index(i)]
-		
-	
-	
-	return dist
-	
+def bfs(Graph, s): 
+  	#n is the total number of nodes
+        visited[:n] = [False] 
 
-
-
+        queue = [] 
+        queue.append(s) 
+        visited[s] = True
+  
+        while queue: 
+            s = queue.pop(0) 
+            print (s, end = " ") 
+            for i in Graph[s]: 
+                if visited[i] == False: 
+                    queue.append(i) 
+                    visited[i] = True
+	
 if __name__=='__main__'	:	
 	n=int(input())#no of vertex
 
